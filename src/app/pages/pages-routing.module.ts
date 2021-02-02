@@ -5,23 +5,28 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
-import { OrdersComponent } from './orders/orders.component';
 
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [
-    {
-      path: 'dashboard',
-      component: ECommerceComponent,
-    },
-    {
-      path: 'iot-dashboard',
-      component: DashboardComponent,
-    },
+    // {
+    //   path: 'dashboard',
+    //   component: ECommerceComponent,
+    // },
+    // {
+    //   path: 'iot-dashboard',
+    //   component: DashboardComponent,
+    // },
     {
       path: 'orders',
-      component: OrdersComponent,
+      loadChildren: () => import('./orders/orders.module')
+      .then(m => m.OrdersModule),
+    },
+    {
+      path: 'products',
+      loadChildren: () => import('./products/products.module')
+      .then(m => m.ProductsModule),
     },
     {
       path: 'layout',

@@ -1,21 +1,43 @@
 import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
-  {
-    title: 'E-commerce',
-    icon: 'shopping-cart-outline',
-    link: '/pages/dashboard',
-    home: true,
-  },
-  {
-    title: 'IoT Dashboard',
-    icon: 'home-outline',
-    link: '/pages/iot-dashboard',
-  },
+  // {
+  //   title: 'E-commerce',
+  //   icon: 'shopping-cart-outline',
+  //   link: '/pages/dashboard',
+  //   home: true,
+  // },
+  // {
+  //   title: 'IoT Dashboard',
+  //   icon: 'home-outline',
+  //   link: '/pages/iot-dashboard',
+  // },
   {
     title: 'Commandes',
     icon: 'file-text-outline',
-    link: '/pages/orders',
+    children: [
+      {
+        title: 'Ajouter',
+        icon: 'file-add-outline',
+        link: '/pages/orders',
+      },
+      {
+        title: 'Consulter',
+        icon: 'folder-outline',
+        link: '/pages/orders/view',
+      },
+    ],
+  },
+  {
+    title: 'Produits',
+    icon: 'pricetags-outline',
+    children: [
+      {
+        title: 'Ajouter',
+        icon: 'plus-outline',
+        link: '/pages/products'
+      },
+    ],
   },
   {
     title: 'FEATURES',
@@ -227,26 +249,26 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
   },
-  {
-    title: 'Auth',
-    icon: 'lock-outline',
-    children: [
-      {
-        title: 'Login',
-        link: '/auth/login',
-      },
-      {
-        title: 'Register',
-        link: '/auth/register',
-      },
-      {
-        title: 'Request Password',
-        link: '/auth/request-password',
-      },
-      {
-        title: 'Reset Password',
-        link: '/auth/reset-password',
-      },
-    ],
-  },
+  // {
+  //   title: 'Auth',
+  //   icon: 'lock-outline',
+  //   children: [
+  //     {
+  //       title: 'Login',
+  //       link: '/auth/login',
+  //     },
+  //     {
+  //       title: 'Register',
+  //       link: '/auth/register',
+  //     },
+  //     {
+  //       title: 'Request Password',
+  //       link: '/auth/request-password',
+  //     },
+  //     {
+  //       title: 'Reset Password',
+  //       link: '/auth/reset-password',
+  //     },
+  //   ],
+  // },
 ];
