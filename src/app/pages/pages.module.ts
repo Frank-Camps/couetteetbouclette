@@ -20,6 +20,7 @@ import { ProductsModule } from './products/products.module';
     MiscellaneousModule,
     OrdersModule,
     ProductsModule,
+
   ],
   declarations: [
     PagesComponent,

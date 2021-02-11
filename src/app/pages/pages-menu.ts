@@ -37,6 +37,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
         icon: 'plus-outline',
         link: '/pages/products'
       },
+      {
+        title: 'Propriétées',
+        icon: {icon: 'cog', pack: 'fa'},
+        link: '/pages/products/properties'
+      },
     ],
   },
   {

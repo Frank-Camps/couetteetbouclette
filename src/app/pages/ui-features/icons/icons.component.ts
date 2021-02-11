@@ -14,10 +14,11 @@ export class IconsComponent {
   constructor(iconsLibrary: NbIconLibraries) {
     this.evaIcons = Array.from(iconsLibrary.getPack('eva').icons.keys())
       .filter(icon => icon.indexOf('outline') === -1);
-
-    iconsLibrary.registerFontPack('fa', { packClass: 'fa', iconClassPrefix: 'fa' });
-    iconsLibrary.registerFontPack('far', { packClass: 'far', iconClassPrefix: 'fa' });
-    iconsLibrary.registerFontPack('ion', { iconClassPrefix: 'ion' });
+      iconsLibrary.registerFontPack('fa', {packClass: 'fa', iconClassPrefix: 'fa' });
+      iconsLibrary.registerFontPack('fas', {packClass: 'fas', iconClassPrefix: 'fa' });
+      iconsLibrary.registerFontPack('fad', { packClass: 'fad', iconClassPrefix: 'fa' });
+      iconsLibrary.registerFontPack('fal', { packClass: 'fal', iconClassPrefix: 'fa' });
+      iconsLibrary.registerFontPack('far', { packClass: 'far', iconClassPrefix: 'fa' });
   }
 
   icons = {

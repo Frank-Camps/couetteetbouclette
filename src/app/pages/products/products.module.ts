@@ -4,15 +4,27 @@ import { RouterModule } from '@angular/router';
 import { ProductsComponent } from './products.component';
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductPropertiesComponent } from './product-properties/product-properties.component';
+import { NbAccordionModule, NbButtonModule, NbCardModule, NbIconModule, NbInputModule, NbListModule, NbSelectModule } from '@nebular/theme';
+import { FormsModule } from '@angular/forms';
+import { PropertiesFormDialogComponent } from './properties-form-dialog/properties-form-dialog.component';
 
 
 
 @NgModule({
-  declarations: [ProductsComponent, ProductFormComponent],
+  declarations: [ProductsComponent, ProductFormComponent, ProductPropertiesComponent, PropertiesFormDialogComponent],
   imports: [
     CommonModule,
     RouterModule,
     ProductsRoutingModule,
+    FormsModule,
+    NbButtonModule,
+    NbCardModule,
+    NbInputModule,
+    NbSelectModule,
+    NbAccordionModule,
+    NbListModule,
+    NbIconModule,
   ]
 })
 export class ProductsModule { }
