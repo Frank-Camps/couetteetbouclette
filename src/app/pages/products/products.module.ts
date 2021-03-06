@@ -8,11 +8,12 @@ import { ProductPropertiesComponent } from './product-properties/product-propert
 import { NbAccordionModule, NbButtonModule, NbCardModule, NbIconModule, NbInputModule, NbListModule, NbSelectModule } from '@nebular/theme';
 import { FormsModule } from '@angular/forms';
 import { PropertiesFormDialogComponent } from './properties-form-dialog/properties-form-dialog.component';
+import { ProductsAllComponent } from './products-all/products-all.component';
 
 
 
 @NgModule({
-  declarations: [ProductsComponent, ProductFormComponent, ProductPropertiesComponent, PropertiesFormDialogComponent],
+  declarations: [ProductsComponent, ProductFormComponent, ProductPropertiesComponent, PropertiesFormDialogComponent, ProductsAllComponent],
   imports: [
     CommonModule,
     RouterModule,

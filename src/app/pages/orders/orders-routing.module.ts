@@ -11,7 +11,7 @@ const routes: Routes = [{
   component: OrdersComponent,
   children: [
     {
-      path: '',
+      path: 'add',
       component: OrderFormComponent,
     },
     {
