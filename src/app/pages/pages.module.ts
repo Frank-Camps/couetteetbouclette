@@ -1,3 +1,4 @@
+import { ClientsModule } from './clients/clients.module';
 import { NgModule } from '@angular/core';
 import { NbMenuModule } from '@nebular/theme';
 
@@ -20,6 +21,7 @@ import { ProductsModule } from './products/products.module';
     MiscellaneousModule,
     OrdersModule,
     ProductsModule,
+    ClientsModule
 
   ],
   declarations: [

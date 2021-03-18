@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment.prod';
 /**
  * @license
  * Copyright Akveo. All Rights Reserved.
@@ -20,6 +21,10 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers, metaReducers } from './@store'
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -39,8 +44,16 @@ import {
     }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
+    // store
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production
+      ? StoreDevtoolsModule.instrument({ maxAge: 25 })
+      : [],
   ],
   bootstrap: [AppComponent],
 })
 export class AppModule {
 }
+
+
+
