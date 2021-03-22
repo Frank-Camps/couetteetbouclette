@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ClientsAddComponent } from './clients-add/clients-add.component';
+import { ClientsAllComponent } from './clients-all/clients-all.component';
+import { ClientsComponent } from './clients.component';
 
 
 
 const routes: Routes = [{
-//   path: '',
-//   component: ProductsComponent,
-//   children: [
-//     {
-//       path: '',
-//       component: ProductsAllComponent,
-//     },
-//     {
-//       path: 'add',
-//       component: ProductFormComponent,
-//     },
-//     {
-//       path: 'properties',
-//       component: ProductPropertiesComponent,
-//     },
-//   ],
+  path: '',
+  component: ClientsComponent,
+  children: [
+    {
+      path: '',
+      component: ClientsAllComponent,
+    },
+    {
+      path: 'add',
+      component: ClientsAddComponent,
+    },
+  ],
 }];
 
 @NgModule({

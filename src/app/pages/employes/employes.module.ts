@@ -3,19 +3,19 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NbAccordionModule, NbButtonModule, NbCardModule, NbIconModule, NbInputModule, NbListModule, NbSelectModule } from '@nebular/theme';
 import { FormsModule } from '@angular/forms';
-import { ClientsRoutingModule } from './clients-routing.module';
-import { ClientsAllComponent } from './clients-all/clients-all.component';
-import { ClientsComponent } from './clients.component';
-import { ClientsAddComponent } from './clients-add/clients-add.component';
+import { EmployesComponent } from './employes.component';
+import { EmployesAddComponent } from './employes-add/employes-add.component';
+import { EmployesAllComponent } from './employes-all/employes-all.component';
+import { EmployesRoutingModule } from './employes-routing.module';
 
 
 
 @NgModule({
-  declarations: [ClientsComponent, ClientsAllComponent, ClientsAddComponent],
+  declarations: [EmployesComponent, EmployesAddComponent, EmployesAllComponent],
   imports: [
     CommonModule,
-    ClientsRoutingModule,
     RouterModule,
+    EmployesRoutingModule,
     FormsModule,
     NbButtonModule,
     NbCardModule,
@@ -26,4 +26,4 @@ import { ClientsAddComponent } from './clients-add/clients-add.component';
     NbIconModule,
   ]
 })
-export class ClientsModule { }
+export class EmployesModule { }

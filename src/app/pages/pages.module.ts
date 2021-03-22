@@ -1,4 +1,3 @@
-import { ClientsModule } from './clients/clients.module';
 import { NgModule } from '@angular/core';
 import { NbMenuModule } from '@nebular/theme';
 
@@ -8,8 +7,10 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
-import { OrdersModule } from './orders/orders.module';
 import { ProductsModule } from './products/products.module';
+import { ClientsModule } from './clients/clients.module';
+import { EmployesModule } from './employes/employes.module';
+import { OrdersModule } from './orders/orders.module';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { ProductsModule } from './products/products.module';
     MiscellaneousModule,
     OrdersModule,
     ProductsModule,
-    ClientsModule
+    ClientsModule,
+    EmployesModule,
 
   ],
   declarations: [

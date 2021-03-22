@@ -1,12 +1,14 @@
 import { ActionReducerMap, MetaReducer } from "@ngrx/store";
 import { environment } from "../../environments/environment";
+import { orderReducer } from "./reducers/order.reducer";
+import { IOrderState } from "./states/order.state";
 
 export interface IAppState {
-    // admin: IAdminState;
+    orders: IOrderState;
 }
 
 export const reducers: ActionReducerMap<IAppState> = {
-    // admin: adminReducer,
+    orders: orderReducer
 };
 
 export const metaReducers: MetaReducer<IAppState>[] = !environment.production ? [] : [];

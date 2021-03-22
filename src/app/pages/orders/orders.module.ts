@@ -1,3 +1,7 @@
+
+
+
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -9,6 +13,7 @@ import { OrdersRoutingModule } from './orders-routing.module';
 import { OrdersListComponent } from './orders-list/orders-list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DragAndDropComponent } from './drag-and-drop/drag-and-drop.component';
+
 
 
 
@@ -26,4 +31,5 @@ import { DragAndDropComponent } from './drag-and-drop/drag-and-drop.component';
     DragDropModule,
   ]
 })
-export class OrdersModule { }
+export class OrdersModule {
+}

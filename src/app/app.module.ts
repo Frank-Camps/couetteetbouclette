@@ -1,4 +1,3 @@
-import { environment } from './../environments/environment.prod';
 /**
  * @license
  * Copyright Akveo. All Rights Reserved.
@@ -24,6 +23,8 @@ import {
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers, metaReducers } from './@store'
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { environment } from './../environments/environment';
 
 
 @NgModule({
@@ -46,9 +47,10 @@ import { reducers, metaReducers } from './@store'
     ThemeModule.forRoot(),
     // store
     StoreModule.forRoot(reducers, { metaReducers }),
-    !environment.production
-      ? StoreDevtoolsModule.instrument({ maxAge: 25 })
-      : [],
+    StoreRouterConnectingModule.forRoot(),
+        !environment.production
+            ? StoreDevtoolsModule.instrument({ maxAge: 25 })
+            : [],
   ],
   bootstrap: [AppComponent],
 })

@@ -56,44 +56,34 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //========Clients============
   {
     title: 'Clients',
-    icon: {icon: 'address-book', pack: 'fa'},
+    icon: {icon: 'user-tie', pack: 'fa'},
     children: [
       {
-        title: 'Tous les produits',
-        icon: 'folder-outline',
-        link: '/pages/products'
+        title: 'Tous les clients',
+        icon: {icon: 'address-book', pack: 'fa'},
+        link: '/pages/clients'
       },
       {
-        title: 'Ajouter',
-        icon: 'plus-outline',
-        link: '/pages/products/add'
-      },
-      {
-        title: 'Propriétées',
-        icon: {icon: 'cog', pack: 'fa'},
-        link: '/pages/products/properties'
+        title: 'Ajouter un client',
+        icon: {icon: 'user-plus', pack: 'fa'},
+        link: '/pages/clients/add'
       },
     ],
   },
   //========Employes============
   {
     title: 'Employés',
-    icon: {icon: 'user', pack: 'fa'},
+    icon: {icon: 'id-card', pack: 'fa'},
     children: [
       {
-        title: 'Tous les produits',
-        icon: 'folder-outline',
-        link: '/pages/products'
+        title: 'Tous les employés',
+        icon: {icon: 'address-book', pack: 'fa'},
+        link: '/pages/employes'
       },
       {
-        title: 'Ajouter',
+        title: 'Ajouter un employé',
         icon: 'plus-outline',
-        link: '/pages/products/add'
-      },
-      {
-        title: 'Propriétées',
-        icon: {icon: 'cog', pack: 'fa'},
-        link: '/pages/products/properties'
+        link: '/pages/employes/add'
       },
     ],
   },
